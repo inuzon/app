@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f2e9">
+  <meta name="theme-color" content="#fff8df">
   <meta name="description" content="一杯のコーヒーと、ゆっくり流れる時間。喫茶室 こもれびのご案内。">
   <title>喫茶室 こもれび | ゆっくり、ひと息。</title>
   <style>
-    :root { --ink:#26382f; --muted:#68756b; --paper:#f6f2e9; --green:#536d57; --orange:#d78657; --line:#dedbcf; }
+    :root { --ink:#263b48; --muted:#586c72; --paper:#fff8df; --green:#078b83; --orange:#f05d43; --line:#f2d9a4; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; color:var(--ink); background:var(--paper); font-family:"Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; line-height:1.8; }
@@ -26,23 +26,23 @@
     .button { display:inline-flex; align-items:center; gap:20px; margin-top:23px; padding:12px 20px; background:var(--green); color:white; border-radius:3px; font-size:13px; transition:.2s; }
     .button:hover { background:var(--ink); transform:translateY(-2px); }
     .button span { font-size:18px; line-height:1; }
-    .hero-art { height:465px; position:relative; background:#d9dfd0; overflow:hidden; border-radius:48% 48% 4px 4px; }
-    .sun { position:absolute; width:180px; height:180px; border-radius:50%; background:#e5b985; top:48px; right:17%; opacity:.8; }
-    .hill { position:absolute; width:130%; height:56%; bottom:-13%; left:-15%; background:#82947b; border-radius:50% 50% 0 0; transform:rotate(-8deg); }
-    .hill.two { background:#a6b19a; height:42%; bottom:-10%; left:24%; transform:rotate(12deg); }
-    .table { position:absolute; z-index:2; width:56%; height:12px; background:#795c43; bottom:22%; left:23%; border-radius:50%; box-shadow:0 8px 0 #795c43; }
-    .cup { position:absolute; z-index:3; width:92px; height:79px; bottom:25%; left:42%; background:#f5eee1; border-radius:8px 8px 28px 28px; box-shadow:inset 0 8px #c7a687; }
-    .cup:after { content:""; position:absolute; width:32px; height:34px; right:-23px; top:12px; border:8px solid #f5eee1; border-left:0; border-radius:0 50% 50% 0; }
+    .hero-art { height:465px; position:relative; background:#bdeee3; overflow:hidden; border-radius:48% 48% 4px 4px; }
+    .sun { position:absolute; width:180px; height:180px; border-radius:50%; background:#ffd34e; top:48px; right:17%; opacity:.95; }
+    .hill { position:absolute; width:130%; height:56%; bottom:-13%; left:-15%; background:#22a786; border-radius:50% 50% 0 0; transform:rotate(-8deg); }
+    .hill.two { background:#75c95b; height:42%; bottom:-10%; left:24%; transform:rotate(12deg); }
+    .table { position:absolute; z-index:2; width:56%; height:12px; background:#d56b36; bottom:22%; left:23%; border-radius:50%; box-shadow:0 8px 0 #d56b36; }
+    .cup { position:absolute; z-index:3; width:92px; height:79px; bottom:25%; left:42%; background:#fff9e9; border-radius:8px 8px 28px 28px; box-shadow:inset 0 8px #f3a17d; }
+    .cup:after { content:""; position:absolute; width:32px; height:34px; right:-23px; top:12px; border:8px solid #fff9e9; border-left:0; border-radius:0 50% 50% 0; }
     .steam { position:absolute; z-index:4; bottom:49%; left:49%; width:3px; height:34px; background:rgba(255,255,255,.8); border-radius:50%; transform:rotate(8deg); filter:blur(2px); }
-    .leaf { position:absolute; z-index:2; width:130px; height:55px; bottom:35%; left:13%; background:#526d57; border-radius:100% 0 100% 0; transform:rotate(-27deg); }
-    .leaf:after { content:""; position:absolute; width:110px; height:2px; background:#b7c1a6; top:28px; left:8px; transform:rotate(-8deg); }
+    .leaf { position:absolute; z-index:2; width:130px; height:55px; bottom:35%; left:13%; background:#087e6c; border-radius:100% 0 100% 0; transform:rotate(-27deg); }
+    .leaf:after { content:""; position:absolute; width:110px; height:2px; background:#b5e39b; top:28px; left:8px; transform:rotate(-8deg); }
     section { padding:88px 0; }
     .section-head { text-align:center; margin-bottom:42px; }
     .section-head h2 { font:500 34px Georgia,"Yu Mincho",serif; letter-spacing:.08em; margin:4px 0; }
     .section-head p { color:var(--muted); font-size:13px; margin:0; }
-    .about { background:#eeeadf; }
+    .about { background:#ffdf76; }
     .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-    .card { padding:28px; background:var(--paper); min-height:205px; border:1px solid var(--line); }
+    .card { padding:28px; background:#fffdf4; min-height:205px; border:1px solid #f0c85c; border-radius:8px; box-shadow:0 8px 20px #b77c2820; }
     .card .number { color:var(--orange); font:italic 22px Georgia,serif; }
     .card h3 { font-size:17px; margin:12px 0 6px; }
     .card p { color:var(--muted); font-size:13px; margin:0; }
@@ -52,9 +52,9 @@
     .details { margin-top:24px; border-top:1px solid var(--line); }
     .details div { display:grid; grid-template-columns:90px 1fr; padding:11px 0; border-bottom:1px solid var(--line); font-size:13px; }
     .details dt { color:var(--green); font-weight:700; }
-    .map { min-height:300px; background:#e4e4d7; display:grid; place-items:center; position:relative; overflow:hidden; }
-    .map:before,.map:after { content:""; position:absolute; background:#c5d0bd; width:150%; height:24px; transform:rotate(-24deg); }
-    .map:after { transform:rotate(35deg); background:#d4c7b0; height:15px; }
+    .map { min-height:300px; background:#c8f0e2; display:grid; place-items:center; position:relative; overflow:hidden; border-radius:12px; }
+    .map:before,.map:after { content:""; position:absolute; background:#83d5a6; width:150%; height:24px; transform:rotate(-24deg); }
+    .map:after { transform:rotate(35deg); background:#ffd66c; height:15px; }
     .pin { z-index:1; background:var(--green); color:white; padding:13px 18px; border-radius:30px; font-size:13px; box-shadow:0 5px 15px #0002; }
     footer { padding:28px 0; border-top:1px solid var(--line); color:var(--muted); font-size:11px; text-align:center; }
     @media(max-width:720px) {
