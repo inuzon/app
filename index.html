@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fff1d2">
+  <meta name="theme-color" content="#f7e8c8">
   <meta name="description" content="一杯のコーヒーと、ゆっくり流れる時間。喫茶室 こもれびのご案内。">
   <title>喫茶室 こもれび | ¡Hola, café!</title>
   <style>
-    :root { --ink:#493126; --muted:#79594a; --paper:#fff1d2; --green:#087f8c; --orange:#e65335; --line:#edc58d; }
+    :root { --ink:#392a32; --muted:#66525a; --paper:#f7e8c8; --green:#174f73; --orange:#bd3e32; --line:#d7b77e; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; color:var(--ink); background:var(--paper); font-family:"Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; line-height:1.8; }
     a { color:inherit; text-decoration:none; }
     .wrap { width:min(1100px, calc(100% - 48px)); margin:auto; }
-    header { height:84px; display:flex; align-items:center; justify-content:space-between; }
-    .logo { font-family:Georgia,serif; font-size:21px; letter-spacing:.12em; font-weight:700; color:#bd482d; }
+    header { height:84px; display:flex; align-items:center; justify-content:space-between; border-bottom:4px solid transparent; border-image:repeating-linear-gradient(90deg,#bd3e32 0 16px,#edb83f 16px 32px,#174f73 32px 48px,#63915a 48px 64px) 4; }
+    .logo { font-family:Georgia,serif; font-size:21px; letter-spacing:.12em; font-weight:700; color:#9d302e; }
     .logo small { display:block; font:10px sans-serif; letter-spacing:.22em; color:var(--muted); margin-top:-5px; }
     nav { display:flex; gap:34px; align-items:center; font-size:13px; }
     nav a:hover { color:var(--orange); }
@@ -26,10 +26,11 @@
     .button { display:inline-flex; align-items:center; gap:20px; margin-top:23px; padding:12px 20px; background:var(--green); color:white; border-radius:3px; font-size:13px; transition:.2s; }
     .button:hover { background:var(--ink); transform:translateY(-2px); }
     .button span { font-size:18px; line-height:1; }
-    .hero-art { height:465px; position:relative; background:#70d1c4; overflow:hidden; border-radius:48% 48% 4px 4px; }
-    .sun { position:absolute; width:205px; height:205px; border-radius:50%; background:#ffbd35; top:38px; right:14%; opacity:1; box-shadow:0 0 0 14px #ffbd3530; }
-    .hill { position:absolute; width:130%; height:56%; bottom:-13%; left:-15%; background:#078b80; border-radius:50% 50% 0 0; transform:rotate(-8deg); }
-    .hill.two { background:#92bd45; height:42%; bottom:-10%; left:24%; transform:rotate(12deg); }
+    .hero-art { height:465px; position:relative; background:repeating-linear-gradient(0deg,#f4c85d 0 12px,#e9a84b 12px 15px,#f4c85d 15px 27px,#fff0cd 27px 30px); overflow:hidden; border-radius:8px; border:8px solid #174f73; box-shadow:inset 0 0 0 5px #f7e8c8, 0 10px 0 #bd3e32; }
+    .hero-art:before { content:""; position:absolute; z-index:5; inset:0; pointer-events:none; background:repeating-linear-gradient(45deg,transparent 0 22px,#bd3e32 22px 26px,transparent 26px 44px),repeating-linear-gradient(-45deg,transparent 0 22px,#174f73 22px 26px,transparent 26px 44px); opacity:.16; }
+    .sun { position:absolute; width:205px; height:205px; border-radius:50%; background:repeating-conic-gradient(#f4c542 0 15deg,#e88c36 15deg 30deg); top:38px; right:14%; opacity:1; box-shadow:0 0 0 10px #bd3e32,0 0 0 17px #f4c542; }
+    .hill { position:absolute; width:130%; height:56%; bottom:-13%; left:-15%; background:repeating-linear-gradient(135deg,#174f73 0 14px,#1d6680 14px 21px,#174f73 21px 35px); border-radius:50% 50% 0 0; transform:rotate(-8deg); }
+    .hill.two { background:repeating-linear-gradient(45deg,#648d4d 0 14px,#8eaa52 14px 21px,#648d4d 21px 35px); height:42%; bottom:-10%; left:24%; transform:rotate(12deg); }
     .table { position:absolute; z-index:2; width:56%; height:12px; background:#b64c2d; bottom:22%; left:23%; border-radius:50%; box-shadow:0 8px 0 #b64c2d; }
     .cup { position:absolute; z-index:3; width:92px; height:79px; bottom:25%; left:42%; background:#fff9e9; border-radius:8px 8px 28px 28px; box-shadow:inset 0 8px #ef7954; }
     .cup:after { content:""; position:absolute; width:32px; height:34px; right:-23px; top:12px; border:8px solid #fff9e9; border-left:0; border-radius:0 50% 50% 0; }
@@ -40,9 +41,10 @@
     .section-head { text-align:center; margin-bottom:42px; }
     .section-head h2 { font:500 34px Georgia,"Yu Mincho",serif; letter-spacing:.08em; margin:4px 0; }
     .section-head p { color:var(--muted); font-size:13px; margin:0; }
-    .about { background:#f8ce65; }
+    .about { background:#e9bd67; position:relative; }
+    .about:before { content:""; display:block; height:14px; position:absolute; top:0; left:0; right:0; background:repeating-linear-gradient(135deg,#bd3e32 0 10px,#f4c542 10px 20px,#174f73 20px 30px,#648d4d 30px 40px); }
     .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-    .card { padding:28px; background:#fff9eb; min-height:205px; border:1px solid #eab972; border-radius:8px; box-shadow:0 8px 20px #9b4a2920; }
+    .card { padding:28px; background:#fff8e8; min-height:205px; border:2px solid #174f73; border-radius:2px; box-shadow:5px 5px 0 #bd3e32; }
     .card .number { color:var(--orange); font:italic 22px Georgia,serif; }
     .card h3 { font-size:17px; margin:12px 0 6px; }
     .card p { color:var(--muted); font-size:13px; margin:0; }
@@ -52,9 +54,9 @@
     .details { margin-top:24px; border-top:1px solid var(--line); }
     .details div { display:grid; grid-template-columns:90px 1fr; padding:11px 0; border-bottom:1px solid var(--line); font-size:13px; }
     .details dt { color:var(--green); font-weight:700; }
-    .map { min-height:300px; background:#a2e2d1; display:grid; place-items:center; position:relative; overflow:hidden; border-radius:12px; }
-    .map:before,.map:after { content:""; position:absolute; background:#79bd72; width:150%; height:24px; transform:rotate(-24deg); }
-    .map:after { transform:rotate(35deg); background:#f2bd5c; height:15px; }
+    .map { min-height:300px; background:repeating-linear-gradient(0deg,#e5c66e 0 22px,#fff0ce 22px 28px,#bd6950 28px 34px,#fff0ce 34px 40px); display:grid; place-items:center; position:relative; overflow:hidden; border:7px solid #174f73; border-radius:2px; }
+    .map:before,.map:after { content:""; position:absolute; background:repeating-linear-gradient(90deg,#648d4d 0 12px,#b5c16b 12px 18px,#648d4d 18px 30px); width:150%; height:24px; transform:rotate(-24deg); }
+    .map:after { transform:rotate(35deg); background:repeating-linear-gradient(90deg,#bd3e32 0 10px,#f4c542 10px 16px,#bd3e32 16px 28px); height:15px; }
     .pin { z-index:1; background:var(--green); color:white; padding:13px 18px; border-radius:30px; font-size:13px; box-shadow:0 5px 15px #0002; }
     footer { padding:28px 0; border-top:1px solid var(--line); color:var(--muted); font-size:11px; text-align:center; }
     @media(max-width:720px) {
